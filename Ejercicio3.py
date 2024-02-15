@@ -7,7 +7,6 @@ def encontrar_palabras_comunes(lista1, lista2):
     palabras_comunes = list(set1.intersection(set2))
     return palabras_comunes
 
-# Ejemplo de uso
-lista1 = ["manzana", "banana", "cereza"]
-lista2 = ["banana", "kiwi", "cereza"]
+lista1 = ["manzana", "zanahoria", "banana", "pizza", "cereza"]
+lista2 = ["banana", "kiwi", "queso", "pizza", "cereza"]
 print(encontrar_palabras_comunes(lista1, lista2))
