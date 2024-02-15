@@ -3,20 +3,26 @@
 #La receta de [Nombre de la receta] contiene [Número] calorías. 
 
 def formatear_receta(cadena_corrupta):
-    # Invertir la cadena
+    # Invertir la cadena completa para corregir el orden
     cadena_corregida = cadena_corrupta[::-1]
 
-    # Dividir la cadena en nombre de la receta y calorías
-    partes = cadena_corregida.split(' ', 1)
-    nombre_receta = partes[1][::-1]  # Invertir el nombre de la receta
-    calorias = partes[0][::-1]  # Invertir las calorías
+    # Encontrar el índice del primer espacio para separar las calorías del nombre de la receta
+    indice_espacio = cadena_corregida.find(' ')
+    
+    # Las calorías están al inicio de la cadena corregida, seguido por el nombre de la receta
+    calorias = cadena_corregida[:indice_espacio]
+    nombre_receta = cadena_corregida[indice_espacio + 1:]
 
-    # Formatear la cadena resultante
+    # Formatear la cadena resultante correctamente
     cadena_formateada = f"La receta de {nombre_receta} contiene {calorias} calorías."
 
     return cadena_formateada
 
-# Ejemplo de uso
-cadena_corrupta = "atellam elehsarfóitnerdnocsezerp eziloaC8210"
+# Solicitar datos al usuario
+cadena_corrupta = input("Ingrese la cadena corrupta: ")
+
+# Formatear la receta
 cadena_formateada = formatear_receta(cadena_corrupta)
+
+# Mostrar el resultado
 print(cadena_formateada)
