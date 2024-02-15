@@ -1,0 +1,2 @@
+#Priorización de Tareas en un Videojuego
+#Durante la planificación de un videojuego, se han acordado una serie de misiones con niveles de dificultad. Crea una estructura de cola con todas las misiones ordenadas por dificultad pero sin mostrar los números de dificultad.

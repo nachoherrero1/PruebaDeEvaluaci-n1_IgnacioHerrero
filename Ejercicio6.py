@@ -1,0 +1,2 @@
+#Separar Personajes de Videojuegos
+#Crea una función que tome una lista de personajes de videojuegos y devuelva dos listas ordenadas: la primera con personajes humanos y la segunda con personajes no humanos.
